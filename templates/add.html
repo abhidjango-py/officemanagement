@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}ADD | {% endblock title %} 
+{% block body %}
+<h1>ADD HERE!</h1>
+
+<form action="/add_emp" method="POST">
+{% csrf_token %}
+<label for="first_name">First Name</label><br>
+<input name="first_name" type="text" id="first_name" value={{ first_name }}><br>
+
+<label for="last_name">Last Name</label><br>
+<input name="last_name" type="text" id="last_name" value={{last_name }}><br>
+
+<label for="salary">Salary</label><br>
+<input name="salary" type="text" id="salary" value={{salary}}><br>
+
+<label for="dept">Department</label><br>
+<input name="dept" type="number" id="dept" value={{dept}}><br>
+
+<label for="role">Role</label><br>
+<input name="role" type="number" id="role" value={{role}}><br>
+
+<label for="bonus">Bonus</label><br>
+<input name="bonus" type="number" id="bonus" value={{bonus}}><br>
+
+<label for="phone">Phone</label><br>
+<input name="phone" type="number" id="phone" value={{phone}}><br>
+
+<hr>
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock body %}

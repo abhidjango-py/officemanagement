@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}FLITER | {% endblock title %}
+{% block body %}
+<h1>FILTER HERE!</h1>
+<form action="/fil_emp" method="POST">
+    {% csrf_token %}
+    <label for="name">Enter First or Last Name</label><br>
+    <input name="name" type="text" id="name" value={{name}}><br>
+    
+    <label for="dept">Department</label><br>
+    <input name="dept" type="text" id="dept" value={{dept}}><br>
+    
+    <label for="role">Role</label><br>
+    <input name="role" type="text" id="role" value={{role}}><br>
+    
+    <hr>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+{% endblock body %}
